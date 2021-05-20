@@ -1,0 +1,193 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul[class] {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.attachment {
+    padding: 50px 0;
+}
+
+.attachment__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 40px;
+    color: #000;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+    color: #6b6b6b;
+}
+
+h3 {
+    color: #6b6b6b;
+    margin-bottom: 10px;
+}
+
+.attachment__control {
+    position: sticky;
+    top: 15px;
+    display: flex;
+}
+
+.attachment__control-item {
+    margin-right: 20px;
+    width: 200px;
+}
+
+.attachment__control-item input, .attachment__control-item select {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.attachment__control-item button {
+    width: 100%;
+}
+
+.attachment__control-item label {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar {
+    position: relative;
+    width: 250px;
+}
+.current-time {
+    position: absolute;
+    right: 0;
+    width: 250px;
+    height: 2px;
+    background-color: red;
+    display: none;
+    z-index: 999;
+}
+.track-events {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    background-color: #E2ECF5;
+    color: #000;
+    padding: 20px 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    width: 250px;
+    font-weight: 700;
+    text-align: center;
+    display: none;
+}
+.events-list li {
+    margin-bottom: 10px;
+    color: #6b6b6b;
+    font-size: 14px;
+    text-align: left;
+}
+.one-hour {
+    height: 120px;
+    border-top: 1px solid #bdbdbd;
+    color: #bdbdbd;
+    position: relative;
+}
+
+.time {
+    font-size: 16px;
+}
+
+.half-an-hour {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    font-size: 12px;
+    transform: translateY(-50%);
+}
+
+.event {
+    position: absolute;
+    width: 200px;
+    background-color: #E2ECF5;
+    border-left: 2px solid #6E9ECF;
+    height: 60px;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.event p {
+    padding: 5px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.change-event {
+    display: none;
+}

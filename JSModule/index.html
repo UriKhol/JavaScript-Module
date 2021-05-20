@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSModule</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="attachment">
+    <div class="container">
+        <h1>JSModule</h1>
+        <h2>calendar app</h2>
+        <h3 style="text-align: right;">Events can be added from <span style="color: red;">8:00</span> to <span
+                style="color: red;">17:00</span>
+        </h3>
+        <h3 style="text-align: right;">Minimum event time <span style="color: red;">15</span> minutes</h3>
+        <div class="attachment__row">
+            <div class="attachment__control-inner">
+                <div class="attachment__control">
+                    <div class="attachment__control-item">
+                        <h3>Create Event</h3>
+                        <form class="create-event form">
+                            <label>Start event</label>
+                            <input type="time" class="create-event__start" min="08:00" max="16:45" required/>
+                            <label>End event</label>
+                            <input type="time" class="create-event__duration" min="08:00" max="17:00" required/>
+                            <label>Event title</label>
+                            <input type="text" class="create-event__title" required>
+                            <label>Select color:</label>
+                            <input type="color" class="create-event__color" value="#E2ECF5" required>
+                            <button type="submit">Create</button>
+                        </form>
+                    </div>
+                    <div class="attachment__control-item">
+                        <h3>Change Event</h3>
+                        <label>Choose event</label>
+                        <select class="change-event__select">
+                            <option value="empty">empty</option>
+                        </select>
+                        <form class="change-event form">
+                            <label>Start event</label>
+                            <input type="time" class="change-event__start" min="08:00" max="16:45" required/>
+                            <label>End event</label>
+                            <input type="time" class="change-event__duration" min="08:00" max="17:00" required/>
+                            <label>Event title</label>
+                            <input type="text" class="change-event__title" required>
+                            <label>Select color:</label>
+                            <input type="color" class="change-event__color" value="#E2ECF5" required>
+                            <button type="submit">Change</button>
+                        </form>
+                    </div>
+
+                    <div class="attachment__control-item">
+                        <h3>Remove Event</h3>
+                        <form class="delete-event form">
+                            <label>Choose event</label>
+                            <select class="delete-event__select">
+                                <option value="empty">empty</option>
+                            </select>
+                            <button type="submit">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar">
+                <div class="current-time"></div>
+                <div class="time-scale">
+                    <div class="one-hour">
+                        <div class="time">8:00</div>
+                        <span class="half-an-hour">8:30</span>
+                    </div>
+                    <div class="one-hour">
+                        <div class="time">9:00</div>
+                        <span class="half-an-hour">9:30</span>
+                    </div>
+                    <div class="one-hour">
+                        <div class="time">10:00</div>
+                        <span class="half-an-hour">10:30</span>
+                    </div>
+                    <div class="one-hour">
+                        <div class="time">11:00</div>
+                        <span class="half-an-hour">11:30</span>
+                    </div>
+                    <div class="one-hour">
+                        <div class="time">12:00</div>
+                        <span class="half-an-hour">12:30</span>
+                    </div>
+                    <div class="one-hour">
+                        <div class="time">1:00</div>
+                        <span class="half-an-hour">1:30</span>
+                    </div>
+                    <div class="one-hour">
+                        <div class="time">2:00</div>
+                        <span class="half-an-hour">2:30</span>
+                    </div>
+                    <div class="one-hour">
+                        <div class="time">3:00</div>
+                        <span class="half-an-hour">3:30</span>
+                    </div>
+                    <div class="one-hour">
+                        <div class="time">4:00</div>
+                        <span class="half-an-hour">4:30</span>
+                    </div>
+                    <div class="one-hour" style="height: 25px;">
+                        <div class="time">5:00</div>
+                    </div>
+                </div>
+                <div class="events-basket"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="track-events">
+    Current events:
+    <ul class="events-list">
+    </ul>
+</div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
